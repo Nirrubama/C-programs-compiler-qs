@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int a;
+    int power;
+
+    printf("Enter a number: ");
+    scanf("%d", &a);
+
+    power = a * a * a;
+
+    printf("The cube power of the given no. %d is: %d\n", a, power);
+
+    return 0;
+}
