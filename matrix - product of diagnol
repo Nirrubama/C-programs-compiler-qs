@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int a[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    int i;
+    int mainProduct = 1;
+    int secondaryProduct = 1;
+
+    for (i = 0; i < 3; i++) {
+        mainProduct = mainProduct * a[i][i];           // Main diagonal
+        secondaryProduct = secondaryProduct * a[i][2 - i];  // Secondary diagonal
+    }
+
+    printf("Product of main diagonal elements = %d\n", mainProduct);
+    printf("Product of secondary diagonal elements = %d\n", secondaryProduct);
+
+    return 0;
+}
