@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    // Fixed array and size
+    int a[7] = {1, 2, 3, 2, 4, 2, 5};
+    int n = 7;
+    int i, j;
+
+    // Element to remove
+    int element = 2;
+
+    // Go through each element
+    for (i = 0; i < n; i++) {
+        if (a[i] == element) {
+            // Shift all next elements left
+            for (j = i; j < n - 1; j++) {
+                a[j] = a[j + 1];
+            }
+            n--;  // Decrease size
+            i--;  // Check same index again
+        }
+    }
+
+    // Print result
+    printf("Array after removing %d: ", element);
+    for (i = 0; i < n; i++) {
+        printf("%d ", a[i]);
+    }
+
+    return 0;
+}
