@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int a[3][3] = {
+        {5, 0, 0},
+        {0, 8, 0},
+        {7, 0, 3}
+    };
+
+    int i, j, isDiagonal = 1;
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            if (i != j && a[i][j] != 0) {
+                isDiagonal = 0;
+                break;
+            }
+        }
+    }
+
+    if (isDiagonal)
+        printf("The matrix is a diagonal matrix.\n");
+    else
+        printf("The matrix is NOT a diagonal matrix.\n");
+
+    return 0;
+}
