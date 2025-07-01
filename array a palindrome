@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    // Fixed array of 5 elements
+    int a[5] = {1, 2, 0, 2, 1};
+    int isPalindrome = 1;
+
+    // Manually compare elements
+    if (a[0] != a[4]) {
+        isPalindrome = 0;
+    }
+    if (a[1] != a[3]) {
+        isPalindrome = 0;
+    }
+
+    // a[2] is the middle element — no need to check
+
+    // Final result
+    if (isPalindrome == 1) {
+        printf("The array is a palindrome.\n");
+    } else {
+        printf("The array is not a palindrome.\n");
+    }
+
+    return 0;
+}
