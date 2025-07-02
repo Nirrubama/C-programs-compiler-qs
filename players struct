@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// Define a structure to hold player information
+struct Player {
+    char name[50];
+    int runs;
+    int ballsFaced;
+    float strikeRate;
+};
+
+int main() {
+   
+    struct Player player1 = {"Dhoni", 50, 40, 125.00};
+    struct Player player2 = {"Jaddu", 60, 50, 120.00};
+
+   
+    printf("Player 1: %s\n", player1.name);
+    printf("Runs: %d\n", player1.runs);
+    printf("Balls Faced: %d\n", player1.ballsFaced);
+    printf("Strike Rate: %.2f\n\n", player1.strikeRate);
+
+    printf("Player 2: %s\n", player2.name);
+    printf("Runs: %d\n", player2.runs);
+    printf("Balls Faced: %d\n", player2.ballsFaced);
+    printf("Strike Rate: %.2f\n", player2.strikeRate);
+
+    return 0;
+}
