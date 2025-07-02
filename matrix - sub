@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    float a[2][2] = {{2, 5}, {8, 9}};      // Matrix A
+    float b[2][2] = {{7, 8}, {9, 41}};     // Matrix B
+    float invB[2][2];                       // To store inverse of B
+    float result[2][2];                     // Result of A * inverse(B)
+    float det;
+    int i, j, k;
+
+    // Step 1: Calculate determinant of B
+    det = b[0][0]*b[1][1] - b[0][1]*b[1][0];
+
+    if(det == 0) {
+        printf("Matrix B is singular and cannot be inverted.\n");
+        return 1;  // Exit program
+    }
+
+    // Step 2: Calculate inverse of B using formula for 2x2 matrix
+    invB[0][0] =  b[1][1] / det;
+    invB[0][1] = -b[0][1] / det;
+    invB[1][0] = -b[1][0] / det;
+    invB[1][1] =  b[0][0] / det;
+
+    // Step 3: Multiply A by inverse of B
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 2; j++) {
+            result[i][j] = 0;
+            for(k = 0; k < 2; k++) {
+                result[i][j] += a[i][k] * invB[k][j];
+            }
+        }
+    }
+
+    // Step 4: Print the result matrix
+    printf("Result of A divided by B (A * B^-1):\n");
+    for(i = 0; i < 2; i++) {
+        for(j = 0; j < 2; j++) {
+            printf("%.2f ", result[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
