@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+// Define a structure to hold car information
+struct Car {
+    char make[50];
+    char model[50];
+    int year;
+};
+
+int main() {
+    // Initialize a car with hardcoded values
+    struct Car myCar = {"Toyota", "Corolla", 2020};
+
+    // Display car information
+    printf("Car Information:\n");
+    printf("Make: %s\n", myCar.make);
+    printf("Model: %s\n", myCar.model);
+    printf("Year: %d\n", myCar.year);
+
+    return 0;
+}
+
