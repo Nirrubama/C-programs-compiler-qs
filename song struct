@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+
+struct Song {
+    char title[100];
+    char artist[50];
+     int length; 
+};
+
+int main() {
+   
+    struct Song mySong = {"Wanna be yours", "Arctic Monkeys", 233};
+
+    int minutes = mySong.length / 60;
+    int seconds = mySong.length % 60;
+
+   
+    printf("Song Title: %s\n", mySong.title);
+    printf("Artist: %s\n", mySong.artist);
+   
+    printf("Length: %d:%02d\n", minutes, seconds);
+
+    return 0;
+}
+
