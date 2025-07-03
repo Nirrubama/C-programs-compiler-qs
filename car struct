@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Define a structure to hold car information
+
 struct Car {
     char make[50];
     char model[50];
@@ -9,14 +9,30 @@ struct Car {
 
 int main() {
     // Initialize a car with hardcoded values
-    struct Car myCar = {"Toyota", "Corolla", 2020};
+    struct Car Car_1 = {"Toyota", "Corolla", 2020};
 
-    // Display car information
-    printf("Car Information:\n");
-    printf("Make: %s\n", myCar.make);
-    printf("Model: %s\n", myCar.model);
-    printf("Year: %d\n", myCar.year);
+    // Display car information                                                                     
+    printf("Car 1 Information:\n");
+    printf("Make: %s\n", Car_1.make);
+    printf("Model: %s\n", Car_1.model);
+    printf("Year: %d\n\n", Car_1.year);
+    
+    struct Car Car_2= {"Suzuki", "WagonR", 2025};
+
+    // Display car information                                                                     
+    printf("Car 2 Information:\n");
+    printf("Make: %s\n", Car_2.make);
+    printf("Model: %s\n", Car_2.model);
+    printf("Year: %d\n\n", Car_2.year);
+    
+    struct Car Car_3= {"Honda", "City", 2023};
+
+    // Display car information                                                                     
+    printf("Car 3 Information:\n");
+    printf("Make: %s\n", Car_3.make);
+    printf("Model: %s\n", Car_3.model);
+    printf("Year: %d\n", Car_3.year);
+    
 
     return 0;
 }
-
