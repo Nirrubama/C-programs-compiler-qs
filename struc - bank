@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+
+struct Bank {
+    char Name[100];
+    char Address[100];
+    long long int phone_no;
+    int Accn_Balance;
+};
+
+int main() {
+   
+    struct Bank Person_1 = {"Ari", "32/2,Karapakkam,chennai-89",9080054155,20000000};
+    printf("Person 1\n");
+    printf("Name: %s\n", Person_1.Name);
+    printf("Address: %s\n", Person_1.Address);
+    printf("Account Balance: %d\n", Person_1.Accn_Balance);
+    printf("Phone No: %lld\n\n", Person_1.phone_no);
+    
+     struct Bank Person_2 = {"Vijay", "33/2,Anna nagar,chennai-39",9952752598,30000000};
+     printf("Person 2\n");
+    printf("Name: %s\n", Person_2.Name);
+    printf("Address: %s\n", Person_2.Address);
+    printf("Account Balance: %d\n",Person_2.Accn_Balance);
+    printf("Phone No: %lld\n", Person_2.phone_no);
+    
+    return 0;
+}
