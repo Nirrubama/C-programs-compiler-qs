@@ -4,22 +4,29 @@
 struct Song {
     char title[100];
     char artist[50];
-     int length; 
+    float duration; 
 };
 
 int main() {
    
-    struct Song mySong = {"Wanna be yours", "Arctic Monkeys", 233};
+    struct Song Song_1 = {"Wanna be yours", "Arctic Monkeys", 3};
 
-    int minutes = mySong.length / 60;
-    int seconds = mySong.length % 60;
+    float minutes = Song_1.duration ;
 
    
-    printf("Song Title: %s\n", mySong.title);
-    printf("Artist: %s\n", mySong.artist);
+    printf("Song Title: %s\n", Song_1.title);
+    printf("Artist: %s\n", Song_1.artist);
+    printf("Duration: %.2f\n\n", minutes);
+
+  struct Song Song_2 = {"Konji pesida venam", "Chitra & Sriram", 5};
+
+   minutes = Song_2.duration;
+
    
-    printf("Length: %d:%02d\n", minutes, seconds);
+    printf("Song Title: %s\n", Song_2.title);
+    printf("Artist: %s\n", Song_2.artist);
+   
+    printf("Duration: %.2f\n\n", minutes);
 
     return 0;
 }
-
