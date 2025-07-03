@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+// Structure for storing employee benefits
+struct Employee {
+    char Name[100];
+    char Health_Insurance[100];
+    char Retirement_Plan[100];
+    int Paid_Time_Off; // in days
+};
+
+int main() {
+    // Employee 1
+    struct Employee Emp_1 = {"Ari", "Gold Plan", "401K", 20};
+    printf("Employee 1\n");
+    printf("Name: %s\n", Emp_1.Name);
+    printf("Health Insurance: %s\n", Emp_1.Health_Insurance);
+    printf("Retirement Plan: %s\n", Emp_1.Retirement_Plan);
+    printf("Paid Time Off: %d days\n\n", Emp_1.Paid_Time_Off);
+
+    // Employee 2
+    struct Employee Emp_2 = {"Vijay", "Silver Plan", "Pension", 15};
+    printf("Employee 2\n");
+    printf("Name: %s\n", Emp_2.Name);
+    printf("Health Insurance: %s\n", Emp_2.Health_Insurance);
+    printf("Retirement Plan: %s\n", Emp_2.Retirement_Plan);
+    printf("Paid Time Off: %d days\n", Emp_2.Paid_Time_Off);
+
+    return 0;
+}
