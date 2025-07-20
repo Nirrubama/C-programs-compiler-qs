@@ -1,31 +1,17 @@
 #include <stdio.h>
 
 int main() {
-    // Original sorted array
     int a[6] = {2, 4, 6, 8, 10};
-    int n = 5;  // current number of elements
+    int n = 5, element = 7, i;
 
-    int element = 7;  // number to insert
+    for (i = n - 1; i >= 0 && a[i] > element; i--)
+        a[i + 1] = a[i];  // shift right
 
-    int i;
+    a[i + 1] = element;  // insert
+    n++;
 
-    // Find correct position
-    for (i = n - 1; i >= 0; i--) {
-        if (element < a[i]) {
-            a[i + 1] = a[i];  // shift right
-        } else {
-            break;
-        }
-    }
-
-    a[i + 1] = element;  // insert element
-    n++;  // increase size
-
-    // Print new array
-    printf("Array after inserting %d: ", element);
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
         printf("%d ", a[i]);
-    }
 
     return 0;
 }
